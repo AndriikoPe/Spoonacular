@@ -13,6 +13,9 @@
 		47FB6813291121E80013E0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB6811291121E80013E0D5 /* Main.storyboard */; };
 		47FB6815291121EA0013E0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB6814291121EA0013E0D5 /* Assets.xcassets */; };
 		47FB6818291121EA0013E0D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB6816291121EA0013E0D5 /* LaunchScreen.storyboard */; };
+		47FB6821291124320013E0D5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 47FB6820291124320013E0D5 /* Alamofire */; };
+		47FB6823291124710013E0D5 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB6822291124700013E0D5 /* Networking.swift */; };
+		47FB68252911247B0013E0D5 /* AlamoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB68242911247A0013E0D5 /* AlamoNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		47FB6814291121EA0013E0D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FB6817291121EA0013E0D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47FB6819291121EA0013E0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47FB6822291124700013E0D5 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		47FB68242911247A0013E0D5 /* AlamoNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FB6821291124320013E0D5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 				47FB680B291121E80013E0D5 /* AppDelegate.swift */,
 				47FB680D291121E80013E0D5 /* SceneDelegate.swift */,
 				47FB680F291121E80013E0D5 /* ViewController.swift */,
+				47FB6822291124700013E0D5 /* Networking.swift */,
+				47FB68242911247A0013E0D5 /* AlamoNetworking.swift */,
 				47FB6811291121E80013E0D5 /* Main.storyboard */,
 				47FB6814291121EA0013E0D5 /* Assets.xcassets */,
 				47FB6816291121EA0013E0D5 /* LaunchScreen.storyboard */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = Spoonacular;
+			packageProductDependencies = (
+				47FB6820291124320013E0D5 /* Alamofire */,
+			);
 			productName = Spoonacular;
 			productReference = 47FB6808291121E80013E0D5 /* Spoonacular.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 47FB67FF291121E80013E0D5;
+			packageReferences = (
+				47FB681F291124320013E0D5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 47FB6809291121E80013E0D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +155,8 @@
 				47FB6810291121E80013E0D5 /* ViewController.swift in Sources */,
 				47FB680C291121E80013E0D5 /* AppDelegate.swift in Sources */,
 				47FB680E291121E80013E0D5 /* SceneDelegate.swift in Sources */,
+				47FB6823291124710013E0D5 /* Networking.swift in Sources */,
+				47FB68252911247B0013E0D5 /* AlamoNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,9 +318,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ua.edu.ukma.Arkhypchuk.Spoonacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +349,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ua.edu.ukma.Arkhypchuk.Spoonacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47FB681F291124320013E0D5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47FB6820291124320013E0D5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47FB681F291124320013E0D5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47FB6800291121E80013E0D5 /* Project object */;
 }
