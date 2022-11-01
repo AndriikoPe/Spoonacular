@@ -16,6 +16,8 @@
 		47FB6821291124320013E0D5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 47FB6820291124320013E0D5 /* Alamofire */; };
 		47FB6823291124710013E0D5 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB6822291124700013E0D5 /* Networking.swift */; };
 		47FB68252911247B0013E0D5 /* AlamoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB68242911247A0013E0D5 /* AlamoNetworking.swift */; };
+		47FB682729119FA30013E0D5 /* EndPointInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB682629119FA30013E0D5 /* EndPointInstructions.swift */; };
+		47FB682B2911A6460013E0D5 /* JSONStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB682A2911A6460013E0D5 /* JSONStructs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		47FB6819291121EA0013E0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47FB6822291124700013E0D5 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		47FB68242911247A0013E0D5 /* AlamoNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoNetworking.swift; sourceTree = "<group>"; };
+		47FB682629119FA30013E0D5 /* EndPointInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointInstructions.swift; sourceTree = "<group>"; };
+		47FB682A2911A6460013E0D5 /* JSONStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStructs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,17 +66,35 @@
 		47FB680A291121E80013E0D5 /* Spoonacular */ = {
 			isa = PBXGroup;
 			children = (
+				47FB68292911A6370013E0D5 /* Utils */,
+				47FB68282911A6290013E0D5 /* NetworkServices */,
 				47FB680B291121E80013E0D5 /* AppDelegate.swift */,
 				47FB680D291121E80013E0D5 /* SceneDelegate.swift */,
 				47FB680F291121E80013E0D5 /* ViewController.swift */,
-				47FB6822291124700013E0D5 /* Networking.swift */,
-				47FB68242911247A0013E0D5 /* AlamoNetworking.swift */,
 				47FB6811291121E80013E0D5 /* Main.storyboard */,
 				47FB6814291121EA0013E0D5 /* Assets.xcassets */,
 				47FB6816291121EA0013E0D5 /* LaunchScreen.storyboard */,
 				47FB6819291121EA0013E0D5 /* Info.plist */,
 			);
 			path = Spoonacular;
+			sourceTree = "<group>";
+		};
+		47FB68282911A6290013E0D5 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				47FB68242911247A0013E0D5 /* AlamoNetworking.swift */,
+				47FB6822291124700013E0D5 /* Networking.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		47FB68292911A6370013E0D5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				47FB682629119FA30013E0D5 /* EndPointInstructions.swift */,
+				47FB682A2911A6460013E0D5 /* JSONStructs.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				47FB6810291121E80013E0D5 /* ViewController.swift in Sources */,
+				47FB682729119FA30013E0D5 /* EndPointInstructions.swift in Sources */,
 				47FB680C291121E80013E0D5 /* AppDelegate.swift in Sources */,
+				47FB682B2911A6460013E0D5 /* JSONStructs.swift in Sources */,
 				47FB680E291121E80013E0D5 /* SceneDelegate.swift in Sources */,
 				47FB6823291124710013E0D5 /* Networking.swift in Sources */,
 				47FB68252911247B0013E0D5 /* AlamoNetworking.swift in Sources */,

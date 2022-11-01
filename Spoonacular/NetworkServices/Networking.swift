@@ -8,62 +8,6 @@
 import Foundation
 
 
-/*
-let headers = [
-    "content-type": "application/x-www-form-urlencoded",
-    "X-RapidAPI-Key": "",
-    "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-]
-
-let postData = NSMutableData(data: "instructions=Put the garlic in a pan and then add the onion.".data(using: String.Encoding.utf8)!)
-
-let request = NSMutableURLRequest(url: NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/analyzeInstructions")! as URL,
-                                        cachePolicy: .useProtocolCachePolicy,
-                                    timeoutInterval: 10.0)
-request.httpMethod = "POST"
-request.allHTTPHeaderFields = headers
-request.httpBody = postData as Data
-
-let session = URLSession.shared
-let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-    if (error != nil) {
-        print(error)
-    } else {
-        let httpResponse = response as? HTTPURLResponse
-        print(httpResponse)
-    }
-})
-
-dataTask.resume()
-*/
-
-
-protocol NetworkRequestBodyConvertible {
-    
-    var data: Data? { get }
-    var queryItems: [URLQueryItem]? { get }
-    var parameters: [String : Any]? { get }
-    
-}
-
-struct RecipeAnalyzeInstruction: NetworkRequestBodyConvertible {
-    
-    var text: String
-    
-    init(_ text: String) {
-        self.text = text
-    }
-    
-    var data: Data? {
-        "instructions=\(text)".data(using: .utf8)
-    }
-    var queryItems: [URLQueryItem]? { nil }
-    
-    var parameters: [String : Any]? {
-        ["instructions" : text]
-    }
-    
-}
 
 protocol Endpoint {
     
@@ -73,11 +17,16 @@ protocol Endpoint {
 
 enum RecipesEndpoint: String, Endpoint {
     
-    case analyzer = "recipes/analyzeInstructions"
+    case analyzer = "analyzeInstructions"
+    case search = "complexSearch"
+    case getRecipe = "information"
+    case guess = "guessNutrition"
+    case classify = "cuisine"
     
     var pathComponent: String {
         rawValue
     }
+    
     
 }
 
@@ -93,6 +42,7 @@ final class Network<T: Endpoint> {
     enum NetworkError: Error {
         
         case badHostString
+        case bad
         
     }
     
@@ -122,7 +72,11 @@ final class Network<T: Endpoint> {
     }
     
     private func makeRequest(_ method: Method, _ endpoint: T, _ parameters: NetworkRequestBodyConvertible?) -> URLRequest {
-        var request = URLRequest(url: host.appending(path: endpoint.pathComponent))
+        
+        let pathComponent = endpoint.pathComponent == RecipesEndpoint.getRecipe.rawValue ?
+        ((parameters as! (GetRecipeInstruction)).id + endpoint.pathComponent) : endpoint.pathComponent
+        
+        var request = URLRequest(url: host.appending(path: pathComponent))
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = headers
         
@@ -137,7 +91,7 @@ final class Network<T: Endpoint> {
     
     func perform(_ method: Method, _ endpoint: T, _ parameters: NetworkRequestBodyConvertible? = nil, completion: @escaping (Result) -> ()) {
         let request = makeRequest(method, endpoint, parameters)
-        
+
         session.dataTask(with: request) { data, _, error in
             if let error {
                 completion(.error(error))
