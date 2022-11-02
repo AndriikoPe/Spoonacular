@@ -94,7 +94,7 @@ struct Ingridient: Codable {
     var id: Int
     var name: String
     var image: String
-    var amount: Int
+    var amount: Double
     var unit: String
 }
 

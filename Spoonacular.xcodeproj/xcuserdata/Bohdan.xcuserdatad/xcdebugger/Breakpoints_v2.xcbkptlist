@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "31811C42-9BF4-42C6-AFDE-8A32E4F94E04"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF6FB4E9-F5D1-4B9C-BE01-8CB4962740A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spoonacular/NetworkServices/Networking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "makeRequest(_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B21861DE-BDD1-468E-A900-9CFD861A29F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spoonacular/NetworkServices/AlamoNetworking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "perform(_:_:_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AA10DA8-7211-4E68-AC4B-4BDF456CD619"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spoonacular/NetworkServices/AlamoNetworking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "perform(_:_:_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABE1456C-98EB-41DE-87E2-E0B466417769"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spoonacular/NetworkServices/AlamoNetworking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "perform(_:_:_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ABE1456C-98EB-41DE-87E2-E0B466417769 - 9dc15124cae07004"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spoonacular.AlamoNetworking.perform(_: Alamofire.HTTPMethod, _: &#x3c4;_0_0, _: Spoonacular.NetworkRequestBodyConvertible, completion: (Spoonacular.AlamoNetworking&lt;&#x3c4;_0_0&gt;.Result) -&gt; ()) -&gt; ()"
+                  moduleName = "Spoonacular"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bohdan/Documents/IOS/IOSFrameworks/Spoonacular/Spoonacular/NetworkServices/AlamoNetworking.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1540">
+               </Location>
+               <Location
+                  uuid = "ABE1456C-98EB-41DE-87E2-E0B466417769 - f7efff41305db880"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Spoonacular.AlamoNetworking.perform(_: Alamofire.HTTPMethod, _: &#x3c4;_0_0, _: Spoonacular.NetworkRequestBodyConvertible, completion: (Spoonacular.AlamoNetworking&lt;&#x3c4;_0_0&gt;.Result) -&gt; ()) -&gt; ()"
+                  moduleName = "Spoonacular"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bohdan/Documents/IOS/IOSFrameworks/Spoonacular/Spoonacular/NetworkServices/AlamoNetworking.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "292">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

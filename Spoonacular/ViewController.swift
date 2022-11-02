@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             Task {
-                let result = await ClassifyCuisineResult().classifyCuisine(text: "3 oz pork shoulder", ingredientList: "Pork roast with green beans")
+                let result = await ClassifyCuisineResult().classifyCuisine(text: "Apple pie", ingredientList: "apples flour water sugar")
                 print(result)
             }
         
