@@ -83,7 +83,9 @@ struct GuessInstruction: NetworkRequestBodyConvertible {
         [URLQueryItem(name: "title", value: text)]
     }
     
-    var parameters: [String : Any]? { nil }
+    var parameters: [String : Any]? {
+        ["title": text]
+    }
     
     
 }

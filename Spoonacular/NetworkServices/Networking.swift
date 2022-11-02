@@ -73,8 +73,13 @@ final class Network<T: Endpoint> {
     
     private func makeRequest(_ method: Method, _ endpoint: T, _ parameters: NetworkRequestBodyConvertible?) -> URLRequest {
         
-        let pathComponent = endpoint.pathComponent == RecipesEndpoint.getRecipe.rawValue ?
-        ((parameters as! (GetRecipeInstruction)).id + endpoint.pathComponent) : endpoint.pathComponent
+        let pathComponent: String
+        
+        if let parameters = parameters as? (GetRecipeInstruction) {
+            pathComponent =  parameters.id + "/" + endpoint.pathComponent
+        } else {
+            pathComponent =  endpoint.pathComponent
+        }
         
         var request = URLRequest(url: host.appending(path: pathComponent))
         request.httpMethod = method.rawValue

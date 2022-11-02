@@ -27,9 +27,14 @@ class AlamoNetworking<T: Endpoint> {
     
     func perform(_ method: HTTPMethod, _ endpoint: T, _ parameters: NetworkRequestBodyConvertible, completion: @escaping (Result) -> ()) {
         
-        let pathComponent = endpoint.pathComponent == RecipesEndpoint.getRecipe.rawValue ?
-                            (host + (parameters as! (GetRecipeInstruction)).id + "/" + endpoint.pathComponent) :
-                            (host + endpoint.pathComponent)
+        let pathComponent: String
+        
+        if let parameters = parameters as? (GetRecipeInstruction) {
+            pathComponent =  (host + parameters.id + "/" + endpoint.pathComponent)
+        } else {
+            pathComponent =  (host + endpoint.pathComponent)
+        }
+
         
         AF
             .request(pathComponent, method: method, parameters: parameters.parameters, headers: HTTPHeaders(headers))

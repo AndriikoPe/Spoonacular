@@ -21,34 +21,24 @@ class ViewController: UIViewController {
         let networkService = AlamoNetworking<RecipesEndpoint>("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/", headers: headers)
 
         Task {
-            let data = try await networkService.perform(.post, .classify, ClassifyInstruction("Pork roast with green beans","3 oz pork shoulder"))
+            let data = try await networkService.perform(.get, .guess, GuessInstruction("Pork roast with green beans"))
             print(try! JSONSerialization.jsonObject(with: data!))
         }
         
-//        networkService.perform(.post, .analyzer, RecipeAnalyzeInstruction("Fried potatoe with chicken, onions and cheese", "479098")) { result in
-//            switch result {
-//            case .data(let data):
-//                print(try! JSONSerialization.jsonObject(with: data!))
-//            case .error(let error): break
-//            }
-//        }
-        
-//        do {
-//
-//
-//            var networkService = try Network<RecipesEndpoint>(
-//                "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/",
-//                headers: headers
-//            )
-//
-//            Task {
-//                let data = try? await networkService.perform(.post, .classify, ClassifyInstruction("Pork roast with green beans","3 oz pork shoulder"))
-//
-//                print(try! JSONSerialization.jsonObject(with: data!))
-//            }
-//        } catch {
-//            print(error)
-//        }
+        do {
+            let networkService = try Network<RecipesEndpoint>(
+                "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/",
+                headers: headers
+            )
+
+            Task {
+                let data = try? await networkService.perform(.post, .classify, ClassifyInstruction("Pork roast with green beans","3 oz pork shoulder"))
+
+                print(try! JSONSerialization.jsonObject(with: data!))
+            }
+        } catch {
+            print(error)
+        }
     }
 
 
