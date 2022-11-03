@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		47FB680C291121E80013E0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB680B291121E80013E0D5 /* AppDelegate.swift */; };
 		47FB680E291121E80013E0D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB680D291121E80013E0D5 /* SceneDelegate.swift */; };
-		47FB6810291121E80013E0D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB680F291121E80013E0D5 /* ViewController.swift */; };
+		47FB6810291121E80013E0D5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB680F291121E80013E0D5 /* SearchViewController.swift */; };
 		47FB6813291121E80013E0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB6811291121E80013E0D5 /* Main.storyboard */; };
 		47FB6815291121EA0013E0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FB6814291121EA0013E0D5 /* Assets.xcassets */; };
 		47FB6818291121EA0013E0D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FB6816291121EA0013E0D5 /* LaunchScreen.storyboard */; };
@@ -18,13 +18,22 @@
 		47FB68252911247B0013E0D5 /* AlamoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB68242911247A0013E0D5 /* AlamoNetworking.swift */; };
 		47FB682729119FA30013E0D5 /* EndPointInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB682629119FA30013E0D5 /* EndPointInstructions.swift */; };
 		47FB682B2911A6460013E0D5 /* JSONStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB682A2911A6460013E0D5 /* JSONStructs.swift */; };
+		BF9BF67829143FFD00DAC419 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BF67729143FFD00DAC419 /* RecipeTableViewCell.swift */; };
+		BF9BF67C2914430F00DAC419 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = BF9BF67B2914430F00DAC419 /* SDWebImage */; };
+		BF9BF68229144E2B00DAC419 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BF68129144E2B00DAC419 /* RecipeDetailsViewController.swift */; };
+		BF9BF6852914600D00DAC419 /* IngridientCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BF6842914600D00DAC419 /* IngridientCollectionViewCell.swift */; };
+		BF9BF687291467EE00DAC419 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BF686291467EE00DAC419 /* Storyboardable.swift */; };
+		BFADA79A29146ED400C3F140 /* KeyValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADA79929146ED400C3F140 /* KeyValueTableViewCell.swift */; };
+		BFADA79C29146F6300C3F140 /* CuisineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADA79B29146F6300C3F140 /* CuisineViewController.swift */; };
+		BFADA79E2914754D00C3F140 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADA79D2914754D00C3F140 /* UIViewController+Extensions.swift */; };
+		BFADA7A029147DC000C3F140 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADA79F29147DC000C3F140 /* NutritionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47FB6808291121E80013E0D5 /* Spoonacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spoonacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47FB680B291121E80013E0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47FB680D291121E80013E0D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47FB680F291121E80013E0D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47FB680F291121E80013E0D5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		47FB6812291121E80013E0D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47FB6814291121EA0013E0D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FB6817291121EA0013E0D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +42,14 @@
 		47FB68242911247A0013E0D5 /* AlamoNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoNetworking.swift; sourceTree = "<group>"; };
 		47FB682629119FA30013E0D5 /* EndPointInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointInstructions.swift; sourceTree = "<group>"; };
 		47FB682A2911A6460013E0D5 /* JSONStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStructs.swift; sourceTree = "<group>"; };
+		BF9BF67729143FFD00DAC419 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		BF9BF68129144E2B00DAC419 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		BF9BF6842914600D00DAC419 /* IngridientCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF9BF686291467EE00DAC419 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		BFADA79929146ED400C3F140 /* KeyValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueTableViewCell.swift; sourceTree = "<group>"; };
+		BFADA79B29146F6300C3F140 /* CuisineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineViewController.swift; sourceTree = "<group>"; };
+		BFADA79D2914754D00C3F140 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		BFADA79F29147DC000C3F140 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9BF67C2914430F00DAC419 /* SDWebImage in Frameworks */,
 				47FB6821291124320013E0D5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,11 +84,12 @@
 		47FB680A291121E80013E0D5 /* Spoonacular */ = {
 			isa = PBXGroup;
 			children = (
-				47FB68292911A6370013E0D5 /* Utils */,
-				47FB68282911A6290013E0D5 /* NetworkServices */,
 				47FB680B291121E80013E0D5 /* AppDelegate.swift */,
 				47FB680D291121E80013E0D5 /* SceneDelegate.swift */,
-				47FB680F291121E80013E0D5 /* ViewController.swift */,
+				BF1580F829143C6F006B6399 /* ViewControllers */,
+				BF9BF6792914424E00DAC419 /* Cells */,
+				47FB68282911A6290013E0D5 /* NetworkServices */,
+				47FB68292911A6370013E0D5 /* Utils */,
 				47FB6811291121E80013E0D5 /* Main.storyboard */,
 				47FB6814291121EA0013E0D5 /* Assets.xcassets */,
 				47FB6816291121EA0013E0D5 /* LaunchScreen.storyboard */,
@@ -91,10 +110,33 @@
 		47FB68292911A6370013E0D5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BF9BF686291467EE00DAC419 /* Storyboardable.swift */,
 				47FB682629119FA30013E0D5 /* EndPointInstructions.swift */,
 				47FB682A2911A6460013E0D5 /* JSONStructs.swift */,
+				BFADA79D2914754D00C3F140 /* UIViewController+Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		BF1580F829143C6F006B6399 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				47FB680F291121E80013E0D5 /* SearchViewController.swift */,
+				BFADA79B29146F6300C3F140 /* CuisineViewController.swift */,
+				BF9BF68129144E2B00DAC419 /* RecipeDetailsViewController.swift */,
+				BFADA79F29147DC000C3F140 /* NutritionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF9BF6792914424E00DAC419 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BF67729143FFD00DAC419 /* RecipeTableViewCell.swift */,
+				BF9BF6842914600D00DAC419 /* IngridientCollectionViewCell.swift */,
+				BFADA79929146ED400C3F140 /* KeyValueTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +157,7 @@
 			name = Spoonacular;
 			packageProductDependencies = (
 				47FB6820291124320013E0D5 /* Alamofire */,
+				BF9BF67B2914430F00DAC419 /* SDWebImage */,
 			);
 			productName = Spoonacular;
 			productReference = 47FB6808291121E80013E0D5 /* Spoonacular.app */;
@@ -146,6 +189,7 @@
 			mainGroup = 47FB67FF291121E80013E0D5;
 			packageReferences = (
 				47FB681F291124320013E0D5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BF9BF67A2914430F00DAC419 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 47FB6809291121E80013E0D5 /* Products */;
 			projectDirPath = "";
@@ -174,13 +218,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47FB6810291121E80013E0D5 /* ViewController.swift in Sources */,
+				BF9BF687291467EE00DAC419 /* Storyboardable.swift in Sources */,
+				47FB6810291121E80013E0D5 /* SearchViewController.swift in Sources */,
+				BF9BF68229144E2B00DAC419 /* RecipeDetailsViewController.swift in Sources */,
 				47FB682729119FA30013E0D5 /* EndPointInstructions.swift in Sources */,
 				47FB680C291121E80013E0D5 /* AppDelegate.swift in Sources */,
+				BFADA79C29146F6300C3F140 /* CuisineViewController.swift in Sources */,
+				BFADA7A029147DC000C3F140 /* NutritionViewController.swift in Sources */,
 				47FB682B2911A6460013E0D5 /* JSONStructs.swift in Sources */,
 				47FB680E291121E80013E0D5 /* SceneDelegate.swift in Sources */,
 				47FB6823291124710013E0D5 /* Networking.swift in Sources */,
+				BFADA79A29146ED400C3F140 /* KeyValueTableViewCell.swift in Sources */,
+				BFADA79E2914754D00C3F140 /* UIViewController+Extensions.swift in Sources */,
+				BF9BF6852914600D00DAC419 /* IngridientCollectionViewCell.swift in Sources */,
 				47FB68252911247B0013E0D5 /* AlamoNetworking.swift in Sources */,
+				BF9BF67829143FFD00DAC419 /* RecipeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,8 +385,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,8 +416,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,6 +466,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		BF9BF67A2914430F00DAC419 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -421,6 +481,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 47FB681F291124320013E0D5 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		BF9BF67B2914430F00DAC419 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF9BF67A2914430F00DAC419 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
