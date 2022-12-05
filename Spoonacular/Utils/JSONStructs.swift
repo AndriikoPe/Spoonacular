@@ -27,9 +27,9 @@ struct SearchRecipeResults: Codable {
                 headers: headers
             )
             
-            let data = try? await networkService.perform(.get, .search, RecipeSearchInstruction(text))
+            let data = try await networkService.perform(.get, .search, RecipeSearchInstruction(text))
             
-            let results = try JSONDecoder().decode(SearchRecipeResults.self, from: data!)
+            let results = try JSONDecoder().decode(SearchRecipeResults.self, from: data)
             
             return results
         } catch {
@@ -81,9 +81,9 @@ struct GetRecipeResults: Codable {
                 headers: headers
             )
             
-            let data = try? await networkService.perform(.get, .getRecipe, GetRecipeInstruction(id))
+            let data = try await networkService.perform(.get, .getRecipe, GetRecipeInstruction(id))
             
-            let results = try JSONDecoder().decode(GetRecipeResults.self, from: data!)
+            let results = try JSONDecoder().decode(GetRecipeResults.self, from: data)
             
             return results
         } catch {
@@ -115,9 +115,9 @@ struct GuessNutritionResults: Codable{
                 headers: headers
             )
             
-            let data = try? await networkService.perform(.get, .guess, GuessInstruction(text))
+            let data = try await networkService.perform(.get, .guess, GuessInstruction(text))
             
-            let results = try JSONDecoder().decode(GuessNutritionResults.self, from: data!)
+            let results = try JSONDecoder().decode(GuessNutritionResults.self, from: data)
             
             return results
         } catch {
@@ -142,9 +142,9 @@ struct ClassifyCuisineResult: Codable {
                 headers: headers
             )
             
-            let data = try? await networkService.perform(.post, .classify, ClassifyInstruction(text, ingredientList))
+            let data = try await networkService.perform(.post, .classify, ClassifyInstruction(text, ingredientList))
             
-            let results = try JSONDecoder().decode(ClassifyCuisineResult.self, from: data!)
+            let results = try JSONDecoder().decode(ClassifyCuisineResult.self, from: data)
             
             return results
         } catch {
