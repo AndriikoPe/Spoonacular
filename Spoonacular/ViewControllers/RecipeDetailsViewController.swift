@@ -14,7 +14,7 @@ final class RecipeDetailsViewController: UIViewController, Storyboardable {
   @IBOutlet private weak var ingridientsCollectionView: UICollectionView!
   @IBOutlet private weak var textView: UITextView!
   
-  var recipe: Recipe!
+  var recipe: Recipe?
   private var recipeDetails: GetRecipeResults? {
     didSet { setupSubviews() }
   }
@@ -26,8 +26,9 @@ final class RecipeDetailsViewController: UIViewController, Storyboardable {
   
   private func fetchDetails() {
     Task {
-      if let result = await GetRecipeResults()
-        .getRecipe(id: String(recipe.id)) {
+      if let id = recipe?.id,
+         let result = await GetRecipeResults()
+        .getRecipe(id: String(id)) {
         DispatchQueue.main.async { [weak self] in
           self?.recipeDetails = result
         }
@@ -75,11 +76,12 @@ extension RecipeDetailsViewController: UICollectionViewDataSource {
     _ collectionView: UICollectionView,
     cellForItemAt indexPath: IndexPath
   ) -> UICollectionViewCell {
+    guard let recipeDetails else { return .init() }
     let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: IngridientCollectionViewCell.identifier,
       for: indexPath
     ) as! IngridientCollectionViewCell
-    cell.configure(with: recipeDetails!.extendedIngredients[indexPath.item])
+    cell.configure(with: recipeDetails.extendedIngredients[indexPath.item])
     
     return cell
   }
