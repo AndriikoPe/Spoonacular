@@ -9,7 +9,7 @@ import UIKit
 
 final class CuisineViewController: UITableViewController, Storyboardable {
   @IBOutlet private weak var titleLabel: UILabel!
-  var recipeDetails: GetRecipeResults!
+  var recipeDetails: GetRecipeResults?
   private var pairs = [(key: String, value: String)]()
   
   override func viewDidLoad() {
@@ -38,7 +38,7 @@ final class CuisineViewController: UITableViewController, Storyboardable {
   
   private func fetchCuisine() {
     Task {
-      if let cuisine = await ClassifyCuisineResult()
+      if let recipeDetails, let cuisine = await ClassifyCuisineResult()
         .classifyCuisine(
           text: recipeDetails.title,
           ingredientList: recipeDetails
@@ -61,6 +61,7 @@ final class CuisineViewController: UITableViewController, Storyboardable {
   }
   
   private func generatePairs() {
+    guard let recipeDetails else { return }
     pairs = [
       ("Vegetarian", recipeDetails.vegetarian ? "Yes" : "No"),
       ("Vegan", recipeDetails.vegan ? "Yes" : "No"),
