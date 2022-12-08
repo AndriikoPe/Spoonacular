@@ -47,17 +47,20 @@ class AlamoNetworking<T: Endpoint> {
             }
     }
     
-    func perform(_ method: HTTPMethod, _ endpoint: T, _ parameters: NetworkRequestBodyConvertible) async throws -> Data? {
-        return try await withCheckedThrowingContinuation { continuation in
-            perform(method, endpoint, parameters) { result in
-                switch result {
-                case .data(let data):
-                    continuation.resume(returning: data)
-                case .error(let error):
-                    continuation.resume(throwing: error)
-                }
-            }
+    func perform(_ method: HTTPMethod, _ endpoint: T, _ parameters: NetworkRequestBodyConvertible) async throws -> Data {
+        
+        let pathComponent: String
+        
+        if let parameters = parameters as? (GetRecipeInstruction) {
+            pathComponent =  (host + parameters.id + "/" + endpoint.pathComponent)
+        } else {
+            pathComponent =  (host + endpoint.pathComponent)
         }
+        
+        
+        return try await AF.request(pathComponent, method: method, parameters: parameters.parameters, headers: HTTPHeaders(headers)).serializingData().value
+        
     }
+    
     
 }
